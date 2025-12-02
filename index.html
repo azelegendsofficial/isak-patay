@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUKI67OFFICIAL - Materi Lengkap tentang Hardware dan Software</title>
+    <title>Brian Official - Penjelasan Tentang Hardware dan Software Serta Fungsi dan Komponen nya</title>
     <style>.card-btn {
             display: inline-block;
             padding: 15px 35px;
-            /* Yellow Gradient */
-            background: linear-gradient(135deg, #facc15, #eab308);
-            color: #000;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
             border-radius: 15px;
             text-decoration: none;
             font-weight: 700;
@@ -21,27 +20,24 @@
 
         .card-btn:hover {
             transform: translateY(-3px);
-            /* Yellow Shadow */
-            box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
         }</style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
         
         :root {
-            /* Yellow Color Scheme */
-            --primary-yellow: #a16207; /* Darker Gold/Brown */
-            --light-yellow: #eab308; /* Primary Yellow */
-            --accent-yellow: #facc15; /* Lighter Yellow */
+            --primary-blue: #1e3a8a;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
             --dark-blue: #0f172a;
             --darker-blue: #020617;
             --pure-white: #ffffff;
             --off-white: #f8fafc;
             --text-dark: #1e293b;
             --text-light: #64748b;
-            --glow-yellow: rgba(250, 204, 21, 0.5);
-            /* Yellow Gradient */
-            --gradient-primary: linear-gradient(135deg, var(--primary-yellow) 0%, var(--light-yellow) 100%);
+            --glow-blue: rgba(59, 130, 246, 0.5);
+            --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
         }
 
         * {
@@ -70,10 +66,9 @@
             height: 100%;
             z-index: -2;
             background: 
-                /* Adjusted orbs to yellow/gold tones */
-                radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(161, 98, 7, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(253, 224, 71, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(30, 58, 138, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(96, 165, 250, 0.08) 0%, transparent 50%),
                 linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
         }
 
@@ -133,7 +128,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark for security */
+            background: linear-gradient(135deg, #0f2847 0%, #1a4d7a 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -185,8 +180,7 @@
 
         .progress-bar {
             height: 100%;
-            /* Yellow Gradient */
-            background: linear-gradient(90deg, #facc15, #eab308);
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
             border-radius: 10px;
             animation: loading 2s ease-in-out;
         }
@@ -202,7 +196,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark for security */
+            background: linear-gradient(135deg, #0f2847 0%, #1a4d7a 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -257,7 +251,7 @@
         }
 
         .username-content {
-            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); /* Kept dark for modal */
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
             padding: 50px;
             border-radius: 30px;
             text-align: center;
@@ -308,7 +302,7 @@
         }
 
         .username-content .security-info strong {
-            color: #facc15; /* Yellow Accent */
+            color: #60a5fa;
             display: block;
             font-size: 16px;
             margin-bottom: 10px;
@@ -328,7 +322,7 @@
 
         .username-input:focus {
             outline: none;
-            border-color: #eab308; /* Yellow Border */
+            border-color: #3b82f6;
             background: rgba(255, 255, 255, 0.15);
         }
 
@@ -339,11 +333,10 @@
         .submit-btn {
             width: 100%;
             padding: 18px;
-            /* Yellow Gradient */
-            background: linear-gradient(135deg, #facc15, #eab308);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
             border: none;
             border-radius: 15px;
-            color: #000;
+            color: #fff;
             font-size: 18px;
             font-weight: 700;
             cursor: pointer;
@@ -352,8 +345,7 @@
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            /* Yellow Shadow */
-            box-shadow: 0 10px 30px rgba(250, 204, 21, 0.5);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
         }
 
         #loading-user {
@@ -383,7 +375,7 @@
             width: 60px;
             height: 60px;
             border: 4px solid rgba(255, 255, 255, 0.2);
-            border-top: 4px solid #facc15; /* Yellow Spinner */
+            border-top: 4px solid #3b82f6;
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 30px;
@@ -434,7 +426,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--primary-yellow); /* Yellow logo text */
+            color: var(--primary-blue);
         }
 
         .logo-icon {
@@ -446,12 +438,12 @@
             align-items: center;
             justify-content: center;
             animation: logoGlow 3s ease-in-out infinite;
-            box-shadow: 0 0 20px var(--glow-yellow); /* Yellow glow */
+            box-shadow: 0 0 20px var(--glow-blue);
         }
 
         @keyframes logoGlow {
-            0%, 100% { box-shadow: 0 0 20px var(--glow-yellow); }
-            50% { box-shadow: 0 0 30px var(--glow-yellow), 0 0 40px rgba(250, 204, 21, 0.3); }
+            0%, 100% { box-shadow: 0 0 20px var(--glow-blue); }
+            50% { box-shadow: 0 0 30px var(--glow-blue), 0 0 40px rgba(59, 130, 246, 0.3); }
         }
 
         .nav-links {
@@ -483,7 +475,7 @@
         }
 
         .nav-links a:hover {
-            color: #000; /* Text color change for yellow background */
+            color: white;
             transform: translateY(-1px);
         }
 
@@ -503,19 +495,19 @@
         }
 
         .user-profile-nav:hover {
-            background: rgba(250, 204, 21, 0.1); /* Yellow hover */
+            background: rgba(59, 130, 246, 0.1);
         }
 
         .user-avatar-nav {
             width: 35px;
             height: 35px;
             border-radius: 50%;
-            border: 2px solid #eab308; /* Yellow border */
+            border: 2px solid #3b82f6;
         }
 
         .user-name-nav {
             font-weight: 600;
-            color: var(--primary-yellow); /* Yellow text */
+            color: var(--primary-blue);
             font-size: 0.9rem;
         }
 
@@ -587,15 +579,14 @@
             font-weight: 600;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out;
-            box-shadow: 0 8px 32px rgba(250, 204, 21, 0.2); /* Yellow shadow */
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
         }
 
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
             margin-bottom: 1.5rem;
-            /* Yellow Gradient */
-            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-yellow) 100%);
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-blue) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -654,8 +645,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            /* Yellow Gradient */
-            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-yellow) 100%);
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-blue) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -695,8 +685,7 @@
             left: 50%;
             width: 0;
             height: 0;
-            /* Yellow radial gradient */
-            background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
             transition: all 0.4s ease;
             transform: translate(-50%, -50%);
             z-index: -1;
@@ -711,8 +700,7 @@
             transform: translateY(-12px) scale(1.02);
             border-color: rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.08);
-            /* Yellow Shadow */
-            box-shadow: 0 25px 50px rgba(250, 204, 21, 0.3);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
         }
 
         .project-icon {
@@ -724,13 +712,13 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            box-shadow: 0 0 30px var(--glow-yellow); /* Yellow glow */
+            box-shadow: 0 0 30px var(--glow-blue);
             transition: all 0.4s ease;
         }
 
         .project-card:hover .project-icon {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 0 40px var(--glow-yellow);
+            box-shadow: 0 0 40px var(--glow-blue);
         }
 
         .project-card h3 {
@@ -753,7 +741,7 @@
             gap: 0.75rem;
             padding: 1rem 2rem;
             background: var(--gradient-primary);
-            color: #000; /* Text color change for yellow background */
+            color: white;
             border: none;
             border-radius: 14px;
             font-weight: 600;
@@ -761,19 +749,19 @@
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3); /* Yellow shadow */
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
         }
 
         .project-btn:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(250, 204, 21, 0.5);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5);
         }
 
-        /* Music Box - kept for structure but colors adjusted */
+        /* Music Box */
         .music-box {
-            background: linear-gradient(135deg, rgba(234, 179, 8, 0.1) 0%, rgba(250, 204, 21, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(234, 179, 8, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.3);
             padding: 3rem;
             border-radius: 30px;
             margin-top: 3rem;
@@ -783,7 +771,7 @@
         }
 
         .music-box::before {
-            content: '💻'; /* Changed to a computer emoji */
+            content: '🎵';
             position: absolute;
             font-size: 150px;
             opacity: 0.05;
@@ -799,26 +787,26 @@
 
         .music-box:hover {
             transform: scale(1.02);
-            box-shadow: 0 30px 60px rgba(234, 179, 8, 0.3);
-            border-color: rgba(234, 179, 8, 0.5);
+            box-shadow: 0 30px 60px rgba(139, 92, 246, 0.3);
+            border-color: rgba(139, 92, 246, 0.5);
         }
 
         .music-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #a16207, #facc15); /* Yellow/Gold Gradient */
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
             animation: musicPulse 3s ease-in-out infinite;
         }
 
         @keyframes musicPulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(250, 204, 21, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(139, 92, 246, 0.7); }
         }
 
         .music-box h3 {
@@ -842,7 +830,7 @@
             border-radius: 30px;
             text-align: center;
             margin-top: 4rem;
-            box-shadow: 0 25px 50px rgba(250, 204, 21, 0.4); /* Yellow Shadow */
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -866,7 +854,7 @@
 
         .company-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 35px 70px rgba(250, 204, 21, 0.6); /* Yellow Shadow */
+            box-shadow: 0 35px 70px rgba(59, 130, 246, 0.6);
         }
 
         .company-card h3 {
@@ -875,7 +863,6 @@
             font-weight: 800;
             position: relative;
             z-index: 1;
-            color: #000; /* Text color for yellow background */
         }
 
         .company-card p {
@@ -885,7 +872,6 @@
             line-height: 1.7;
             position: relative;
             z-index: 1;
-            color: rgba(0, 0, 0, 0.8); /* Text color for yellow background */
         }
 
         .company-btn {
@@ -894,7 +880,7 @@
             gap: 0.75rem;
             padding: 1.25rem 3rem;
             background: white;
-            color: var(--primary-yellow); /* Yellow text */
+            color: var(--primary-blue);
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -926,8 +912,20 @@
         }
 
         .hosting-credit {
-            color: var(--accent-yellow); /* Yellow text */
+            color: var(--accent-blue);
             font-weight: 600;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Mobile Navigation */
@@ -942,7 +940,7 @@
             padding: 15px 0;
             box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            border-top: 1px solid rgba(250, 204, 21, 0.2); /* Yellow border */
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .mobile-nav-content {
@@ -965,7 +963,7 @@
         }
 
         .nav-item:hover {
-            background: rgba(250, 204, 21, 0.1); /* Yellow hover */
+            background: rgba(59, 130, 246, 0.1);
         }
 
         .nav-item svg {
@@ -976,7 +974,7 @@
         .nav-item span {
             font-size: 12px;
             font-weight: 600;
-            color: var(--primary-yellow); /* Yellow text */
+            color: var(--primary-blue);
         }
 
         #mobile-profile-modal {
@@ -985,7 +983,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark */
+            background: linear-gradient(135deg, #0f2847 0%, #1a4d7a 100%);
             z-index: 10002;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1005,11 +1003,38 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 5px solid #eab308; /* Yellow border */
+            border: 5px solid #3b82f6;
             margin: 0 auto 30px;
         }
 
-        /* Responsive styles remain the same */
+        .mobile-profile-name {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .mobile-logout-btn {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .mobile-logout-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.5);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             nav {
                 top: 10px;
@@ -1096,7 +1121,7 @@
         <div class="username-content">
             <div class="security-badge">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L3 6V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V6L12 2Z" stroke="#facc15" stroke-width="2"/>
+                    <path d="M12 2L3 6V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V6L12 2Z" stroke="#60a5fa" stroke-width="2"/>
                 </svg>
             </div>
             <h2>Verifikasi Keamanan</h2>
@@ -1118,8 +1143,8 @@
 
     <div id="mobile-profile-modal">
         <div class="mobile-profile-content">
-            <img src="https://ui-avatars.com/api/?name=SUKI67OFFICIAL&background=eab308&color=000&size=200" alt="Profile" class="mobile-profile-avatar" id="mobile-avatar">
-            <div class="mobile-profile-name" id="mobile-username">SUKI67OFFICIAL</div>
+            <img src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=200" alt="Profile" class="mobile-profile-avatar" id="mobile-avatar">
+            <div class="mobile-profile-name" id="mobile-username">User</div>
             <button class="mobile-logout-btn" onclick="logout()">Log Out</button>
         </div>
     </div>
@@ -1128,15 +1153,15 @@
         <div class="nav-container">
             <div class="logo">
                 <div class="logo-icon"></div>
-                SUKI67OFFICIAL
+                Brian Official
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Materi</a></li>
-                <li><a href="#company">Konsep</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#company">Company</a></li>
             </ul>
             <div class="user-profile-nav" id="user-profile" onclick="toggleDropdown()">
-                <img src="https://ui-avatars.com/api/?name=SUKI67OFFICIAL&background=eab308&color=000&size=100" alt="Profile" class="user-avatar-nav" id="user-avatar">
+                <img src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=100" alt="Profile" class="user-avatar-nav" id="user-avatar">
                 <span class="user-name-nav" id="user-name">User</span>
                 <div class="profile-dropdown" id="profile-dropdown">
                     <button class="logout-btn" onclick="logout()">Log Out</button>
@@ -1149,21 +1174,21 @@
         <div class="mobile-nav-content">
             <div class="nav-item" onclick="scrollToTop()">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#eab308" stroke-width="2"/>
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#3b82f6" stroke-width="2"/>
                 </svg>
                 <span>Home</span>
             </div>
             <div class="nav-item" onclick="scrollToSection('projects')">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#eab308" stroke-width="2"/>
-                    <path d="M3 9H21M9 3V21" stroke="#eab308" stroke-width="2"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#3b82f6" stroke-width="2"/>
+                    <path d="M3 9H21M9 3V21" stroke="#3b82f6" stroke-width="2"/>
                 </svg>
-                <span>Materi</span>
+                <span>Penjelasan</span>
             </div>
             <div class="nav-item" onclick="showMobileProfile()">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="8" r="4" stroke="#eab308" stroke-width="2"/>
-                    <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="12" cy="8" r="4" stroke="#3b82f6" stroke-width="2"/>
+                    <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
                 </svg>
                 <span>Profile</span>
             </div>
@@ -1173,117 +1198,152 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">👋 Selamat Datang</div>
-            <h1>SUKI67OFFICIAL</h1>
-            <p class="hero-subtitle">Halo, di website ini saya akan menjelaskan materi lengkap tentang Hardware dan Software, dari pengertian dasar, jenis-jenis, hingga interaksi dan konsep mendalamnya. (scroll kebawah untuk melihat penjelasan)</p>
+            <h1>Brian Official</h1>
+            <p class="hero-subtitle">Halo, nama saya brian, saya adalah siswa dari sekolah kristen kasih bangsa, disini saya akan menjelaskan apa itu Hardware Dan Software Serta Fungsi dan Jenis Jenis nya apa saja. (scroll kebawah untuk melihat penjelasan)</p>
         </div>
     </section>
 
     <section class="section" id="projects">
         <div class="section-header animate-on-scroll">
-            <div class="section-badge">Materi Inti</div>
-            <h2 class="section-title">Materi Lengkap tentang Hardware dan Software</h2>
+            <div class="section-badge">Penjelasan Ke 1</div>
+            <h2 class="section-title">Penjelasan Apa Itu Hardware serta Fungsi dan contoh contoh komponen?</h2>
         </div>
 
         <div class="project-grid">
             <div class="project-card animate-on-scroll">
                 <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16">
-                        <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
-                        <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5h-.5a.5.5 0 0 0 0 1H2v3H1.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v.5a.5.5 0 0 0 1 0V14h3v.5a.5.5 0 0 0 1 0V14A2.5 2.5 0 0 0 14 11.5h.5a.5.5 0 0 0 0-1H14v-3h.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V1.5a.5.5 0 0 0-1 0V2h-3V1.5a.5.5 0 0 0-1 0zM4.5 3C3.672 3 3 3.672 3 4.5v7c0 .828.672 1.5 1.5 1.5h7c.828 0 1.5-.672 1.5-1.5v-7c0-.828-.672-1.5-1.5-1.5z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-hdd-fill" viewBox="0 0 16 16">
+  <path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M.91 7.204A3 3 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782z"/>
+</svg>
                 </div>
-                <h3>1. Pengertian dan Konsep Dasar</h3>
-                <p>
-                    *Hardware* adalah bagian fisik komputer yang bisa dilihat dan disentuh, seperti prosesor, memori, hard disk, keyboard, dan monitor. Hardware berperan sebagai wadah dan pelaksana tugas-tugas komputasi.
-                    <br><br>
-                    *Software* adalah kumpulan instruksi atau program yang memberi perintah pada hardware agar menjalankan tugas tertentu. Software bersifat abstrak dan tidak bisa disentuh, yang menentukan bagaimana hardware berfungsi.
-                    <br><br>
-                    Keduanya saling bergantung: **hardware tanpa software tidak akan berguna**, dan **software tidak bisa berjalan tanpa hardware**.
-                </p>
-                <a href="#projects" class="project-btn">Baca Lebih Lanjut</a>
+                <h3>Penjelasan Tentang Hardware serta Fungsi nya</h3>
+                <p>Hardware adalah sebuah perangkat keras yang bisa dilihat dan di sentuh secara langsung jadi dia bentuk nya fisik. Hardware atau perangkat keras berfungsi sebagai komponen yang menjalankan fungsi fungsi dasar komputer yaitu menerima Input, memproses data, menyimpan informasi, dan menghasilkan output. Tanpa hardware, komputer tidak dapat beroperasi karena hardware adalah tubuh fisik yang memungkinkan perintah dari software dapat dijalankan.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
             </div>
-
+            <div class="project-grid">
             <div class="project-card animate-on-scroll">
                 <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-hdd-rack-fill" viewBox="0 0 16 16">
-                        <path d="M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M2 7a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-motherboard-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.5 2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zm-7-1a1.5 1.5 0 0 0-1.5 1.5v11A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 11.5 1h-7zM7 3.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zM4 11.5a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1z"/></svg>
                 </div>
-                <h3>2. Jenis-jenis Hardware</h3>
-                <p>
-                    Hardware dikelompokkan berdasarkan fungsinya dan bekerja berdasarkan prinsip elektronik dan listrik:
-                    <ul>
-                        <li>**Unit Input**: Perangkat untuk memasukkan data (keyboard, mouse, scanner).</li>
-                        <li>**Unit Output**: Perangkat yang menampilkan hasil pemrosesan (monitor, printer, speaker).</li>
-                        <li>**Unit Prosesor (CPU)**: Otak komputer yang memproses data dan instruksi.</li>
-                        <li>**Memori**: Tempat menyimpan data sementara (RAM) dan permanen (hard disk, SSD).</li>
-                        <li>**Motherboard**: Papan sirkuit utama yang menghubungkan semua komponen.</li>
-                    </ul>
-                </p>
-                <a href="#projects" class="project-btn">Lihat Detail</a>
+                <h3>Komponen Hardware</h3>
+                <p>Komponen Hardware atau perangkat keras terdiri dari CPU, Hard Disk Drive, Solid State Drive, RAM, Motherboard, Keyboard, Mouse, Monitor, Printer, Graphics Card, dan Power Supply Unit.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
             </div>
-
+            <div class="project-grid">
             <div class="project-card animate-on-scroll">
                 <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-window-split" viewBox="0 0 16 16">
-                        <path d="M7.75 3.5c0 .167-.139.25-.25.25s-.25-.083-.25-.25V3h.5zM7.75 4c0 .167-.139.25-.25.25s-.25-.083-.25-.25v.5h.5z"/>
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 2a.5.5 0 0 0-.5.5V4h13V2.5a.5.5 0 0 0-.5-.5zm12 12a.5.5 0 0 0 .5-.5v-9H1.5v9a.5.5 0 0 0 .5.5z"/>
-                        <path d="M7.5 5.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16"><path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm7.5 1v2h-1v-2zm0-4v2h-1V3zm-2 0h-2V2h2zm-4 0v-1H7v1zm-4 0V2H3v1zm-2 0h-1v2h1zm0 4H2v2h1zm2 0v1h2v-1zm4 0v1h2v-1zm2 0h1v2h-1zm0 4v2h-1v-2zm-2 0v1h-2v-1zm-4 0v1h-2v-1zm-2 0H3v-1h2zm2 0v1h-2v-1zm-4 0v2h-1v-2zm0-4H2v2h1zm2-4V3H5v1zM14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2"/></svg>
                 </div>
-                <h3>3. Jenis-jenis Software</h3>
-                <p>
-                    Software adalah kumpulan kode dari bahasa pemrograman yang diterjemahkan menjadi instruksi mesin yang dimengerti hardware.
-                    <ul>
-                        <li>**System Software**: Mengelola hardware dan menyediakan layanan dasar (Contoh: Operating System - Windows, Linux).</li>
-                        <li>**Application Software**: Program untuk tugas khusus pengguna (Contoh: Microsoft Word, browser web, game).</li>
-                        <li>**Programming Software**: Alat untuk membuat software lain (Contoh: compiler, IDE).</li>
-                        <li>**Utility Software**: Program untuk membantu pengelolaan sistem (Contoh: antivirus, disk cleanup).</li>
-                    </ul>
-                </p>
-                <a href="#projects" class="project-btn">Telusuri Program</a>
+                <h3>CPU (Central Processing Unit)</h3>
+                <p>CPU adalah sebuah singkatan dari Central Processing Unit yang tugas nya sebagai otak dari komputer, jadi dia lah yang mengatur semua sistem pada komputer.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
             </div>
-
+            <div class="project-grid">
             <div class="project-card animate-on-scroll">
                 <div class="project-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
-                        <path d="M11 5a2 2 0 1 0-3.151 1.63L3.89 10.32a2 2 0 1 0 0 3.36l4.958-3.31a2 2 0 1 0 3.15-.052L11 5z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-hdd-fill" viewBox="0 0 16 16"><path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M.91 7.204A3 3 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782z"/></svg>
                 </div>
-                <h3>4. Hubungan dan Interaksi</h3>
-                <p>
-                    Hubungan keduanya sangat erat:
-                    <ul>
-                        <li>**Instruksi**: Software memberikan instruksi dalam bentuk kode yang **CPU jalankan**.</li>
-                        <li>**Kontrol**: CPU membaca instruksi dari memori, memprosesnya, dan **mengontrol perangkat keras lain**.</li>
-                        <li>**Manajemen OS**: OS (*System Software*) mengelola sumber daya hardware, seperti manajemen file, memori, dan perangkat input/output.</li>
-                    </ul>
-                    Intinya, Software adalah **perintah**, dan Hardware adalah **pelaksana** perintah tersebut.
-                </p>
-                <a href="#projects" class="project-btn">Pahami Proses</a>
+                <h3>HDD (Hard Disk Drive)</h3>
+                <p>HDD adalah singkatan dari Hard Disk Drive yang tugas nya sebagai penyimpanan data yang permanen, jadi dia tidak kayak RAM yang hanya menyimpan data sementara.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
             </div>
-        </div>
-    </section>
-
-    <section class="section" id="company">
-        <div class="company-card animate-on-scroll">
-            <h3>5. Pemahaman Konsep Mendalam</h3>
-            <p>
-                Untuk pemahaman yang lebih dalam, perlu diketahui:
-                <ul>
-                    <li>**Arsitektur Komputer** seperti model Von Neumann menjelaskan bagaimana CPU, memori, dan perangkat I/O diatur oleh software sebagai interpreter instruksi.</li>
-                    <li>**Abstraksi Software**: Software disusun dari level tinggi (user interface) hingga rendah (kode mesin) untuk kompatibilitas.</li>
-                    <li>**Perkembangan Hardware** (seperti multi-core CPU/GPU) memungkinkan software lebih kompleks dan efisien (misalnya AI, grafik 3D).</li>
-                    <li>**Keamanan**: Software bisa mengontrol hardware agar aman dari kerusakan atau akses ilegal (firewall, enkripsi).</li>
-                </ul>
-            </p>
-            <a href="#home" class="company-btn">Kembali ke Atas</a>
-        </div>
-    </section>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-disc" viewBox="0 0 16 16"><path d="M12 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0v-15A.5.5 0 0 0 12 0zm-7 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0v-15A.5.5 0 0 0 5 0zM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 1a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                </div>
+                <h3>SSD (Solid State Drive)</h3>
+                <p>SSD adalah singkatan dari Solid State Drive yang tugas nya sebagai penyimpanan data yang permanen, mirip sama kayak Hard Disk Drive yakni menyimpan data secara permanen bukan sementara, tapi SSD lebih bagus karena kecepatan memuat data nya yang sangat kencang di bandingkan sama HDD.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-memory" viewBox="0 0 16 16"><path d="M1 3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm0 3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm0 3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm0 3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/></svg>
+                </div>
+                <h3>RAM (Random Access Memory)</h3>
+                <p>RAM adalah singkatan dari Random Access Memory yang tugas nya sebagai penyimpanan data yang sementara, jadi dia tidak permanen kayak HDD dan SSD yang sama sama menyimpan data tetapi permanen.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-motherboard-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.5 2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zm-7-1a1.5 1.5 0 0 0-1.5 1.5v11A1.5 1.5 0 0 0 4.5 14h7a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 11.5 1h-7zM7 3.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm-2 2a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm2 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zM4 11.5a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1zm2 0a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1z"/></svg>
+                </div>
+                <h3>Motherboard</h3>
+                <p>Motherboard adalah sebuah papan sirkuit terbesar di dalam komputer. Tugas nya itu sebagai pusat dari seluruh sistem, menghubungkan beberapa komponen agar dapat saling berkomunikasi.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-keyboard-fill" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5 1.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM5 8.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM1 11.5a.5.5 0 0 0 .5.5h.5a.5.5 0 0 0 0-1H2a.5.5 0 0 0-.5.5zm1.5 0a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 0a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0-.5.5z"/></svg>
+                </div>
+                <h3>Keyboard</h3>
+                <p>Keyboard adalah sebuah perangkat masukkan yang tugas nya itu memasukkan data, perintah, dan karakter seperti huruf, simbol, dan angka ke dalam sistem komputer.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mouse-fill" viewBox="0 0 16 16"><path d="M3 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm3 0h4v4H6zm0 5h4v9H6z"/></svg>
+                </div>
+                <h3>Mouse</h3>
+                <p>Mouse adalah sebuah perangkat masukkan yang tugas nya itu menggerakkan cursor, selain bisa menggerakkan cursor, mouse nya juga ada tombol klik kanan dan klik kiri, fungsi kedua tombol itu untuk memilih objek, membuka menu konteks, serta ada roda untuk mengscroll suatu halaman web, atau dokumen.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber: https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-display-fill" viewBox="0 0 16 16"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m3.5-9h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1m-1-1a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2z"/></svg>
+                </div>
+                <h3>Monitor</h3>
+                <p>Monitor adalah sebuah perangkat keluaran yang tugas nya itu menampilkan informasi dan visual kepada pengguna, seperti menampilkan gambar, video, dan teks, monitor hanya menampilkan gambar, video, dan teks, tapi proses nya itu di lakukan sama Graphics Card atau GPU.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber:  https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16"><path d="M11 2a1 1 0 0 1 1 1v1H4V3a1 1 0 0 1 1-1h6zm-2-1H7a2 2 0 0 0-2 2h6a2 2 0 0 0-2-2z"/><path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM11 7v1H5V7a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v2h10v-2h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1z"/></svg>
+                </div>
+                <h3>Printer</h3>
+                <p>Printer adalah sebuah perangkat keluaran yang tugas nya itu menyalin dokumen atau gambar ke bentuk fisik, jadi dia itu menyalin document atau gambar dari komputer yang masih dalam bentuk digital, hanya bisa lihat tapi tidak bisa nyentuh lalu salinan tersebut akan diubah menjadi benda fisik yang bisa di sentuh.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber:  https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16"><path d="M11.251.068a.5.5 0 0 1 .233.64l-2.007 5.41a.5.5 0 0 1-.773.23l-2.007-1.39a.5.5 0 0 1-.132-.59L8.252.328a.5.5 0 0 1 .298-.242l2.7-1.558zm-7.69 2.067a.5.5 0 0 1 .158-.292L7.306 4.67a.5.5 0 0 1 .792.21l-2.007 5.41a.5.5 0 0 1-.806.27l-2.007-1.39a.5.5 0 0 1-.186-.67L4.309.843a.5.5 0 0 1 .255-.386z"/></svg>
+                </div>
+                <h3>Kartu Grafis (Graphics Card/GPU(Graphics Processing Unit)/Video Graphics)</h3>
+                <p>Kartus Grafis atau bisa disebut juga GPU atau video graphics atau graphics card adalah sebuah perangkat internal komputer yang tugas nya itu mengelola dan memproses data visual, jadi dia itu menerjemahkan data biner dari prosesor menjadi output visual yang dapat ditampilkan di monitor.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber:  https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16"><path d="M4.467 4C4.162 4 4 4.162 4 4.467v6.066C4 10.838 4.162 11 4.467 11h6.066c.305 0 .467-.162.467-.467V4.467C11 4.162 10.838 4 10.533 4H4.467zM.5 6.5C.5 6.224.724 6 1 6h.5a.5.5 0 0 1 0 1H1C.724 7 .5 6.776.5 6.5zM2 9v1h1v-1H2zM15 6h.5a.5.5 0 0 1 0 1H15a.5.5 0 0 1 0-1zM12 9v1h1v-1h-1zM4.467 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h6.066a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H4.467z"/></svg>
+                </div>
+                <h3>PSU (Power Supply Unit)</h3>
+                <p>PSU atau Power Supply Unit adalah sebuah komponen yang tugas nya itu mengambil listrik dari stopkontak lalu tegangan nya diubah agar lebih stabil, jadi dia itu jantung kelistrikan agar komputer bisa menyala.</p>
+                <a href="https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/" class="card-btn">Sumber:  https://bit.telkomuniversity.ac.id/pengertian-hardware-fungsi-dan-contohnya-penjelasan-lengkap/</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+            
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 SUKI67OFFICIAL. All Rights Reserved.</p>
+            <p>&copy; 2024 Brian Official. All Rights Reserved.</p>
             <p class="hosting-credit">Website ini menggunakan hosting dari <strong>SPACE STORE</strong></p>
         </div>
     </footer>
@@ -1335,8 +1395,7 @@
         }
 
         function setUsername(username) {
-            // Updated avatar to use the new color scheme
-            const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&background=eab308&color=000&size=100`;
+            const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&background=3b82f6&color=fff&size=100`;
             
             document.getElementById('user-name').textContent = username;
             document.getElementById('user-avatar').src = avatarUrl;
