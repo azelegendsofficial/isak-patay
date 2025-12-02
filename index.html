@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUKI67OFFICIAL - Gervonta Davis Blog</title>
+    <title>SUKI67OFFICIAL - Materi Lengkap tentang Hardware dan Software</title>
+    <style>.card-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            /* Yellow Gradient */
+            background: linear-gradient(135deg, #facc15, #eab308);
+            color: #000;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card-btn:hover {
+            transform: translateY(-3px);
+            /* Yellow Shadow */
+            box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+        }</style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
         
         :root {
-            --primary-yellow: #fbbf24;
-            --dark-yellow: #f59e0b;
-            --light-yellow: #fde68a;
+            /* Yellow Color Scheme */
+            --primary-yellow: #a16207; /* Darker Gold/Brown */
+            --light-yellow: #eab308; /* Primary Yellow */
+            --accent-yellow: #facc15; /* Lighter Yellow */
+            --dark-blue: #0f172a;
+            --darker-blue: #020617;
             --pure-white: #ffffff;
-            --off-white: #fefce8;
+            --off-white: #f8fafc;
             --text-dark: #1e293b;
             --text-light: #64748b;
-            --dark-bg: #0f172a;
-            --darker-bg: #020617;
-            --glow-yellow: rgba(251, 191, 36, 0.5);
-            --gradient-primary: linear-gradient(135deg, var(--dark-yellow) 0%, var(--primary-yellow) 100%);
+            --glow-yellow: rgba(250, 204, 21, 0.5);
+            /* Yellow Gradient */
+            --gradient-primary: linear-gradient(135deg, var(--primary-yellow) 0%, var(--light-yellow) 100%);
         }
 
         * {
@@ -30,7 +52,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--dark-bg);
+            background: var(--dark-blue);
             color: var(--pure-white);
             overflow-x: hidden;
             line-height: 1.6;
@@ -48,10 +70,11 @@
             height: 100%;
             z-index: -2;
             background: 
-                radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(253, 230, 138, 0.08) 0%, transparent 50%),
-                linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+                /* Adjusted orbs to yellow/gold tones */
+                radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(161, 98, 7, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(253, 224, 71, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
         }
 
         .floating-orbs {
@@ -70,7 +93,7 @@
             background: var(--gradient-primary);
             filter: blur(40px);
             animation: float 15s infinite ease-in-out;
-            opacity: 0.5;
+            opacity: 0.6;
         }
 
         .orb:nth-child(1) {
@@ -103,6 +126,279 @@
             66% { transform: translateY(20px) rotate(240deg); }
         }
 
+        /* Security & Loading Screens */
+        #security-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark for security */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease;
+        }
+
+        #security-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .security-content {
+            text-align: center;
+        }
+
+        .security-shield {
+            margin: 0 auto 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .security-text {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .security-subtext {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .security-progress {
+            width: 300px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .progress-bar {
+            height: 100%;
+            /* Yellow Gradient */
+            background: linear-gradient(90deg, #facc15, #eab308);
+            border-radius: 10px;
+            animation: loading 2s ease-in-out;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark for security */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading-screen.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-text {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        /* Username Modal */
+        #username-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10001;
+            animation: fadeIn 0.3s ease;
+        }
+
+        #username-modal.active {
+            display: flex;
+        }
+
+        .username-content {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); /* Kept dark for modal */
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 550px;
+            width: 90%;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .security-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .username-content h2 {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .username-content .security-info {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .username-content .security-info strong {
+            color: #facc15; /* Yellow Accent */
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .username-input {
+            width: 100%;
+            padding: 18px 24px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .username-input:focus {
+            outline: none;
+            border-color: #eab308; /* Yellow Border */
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .username-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            /* Yellow Gradient */
+            background: linear-gradient(135deg, #facc15, #eab308);
+            border: none;
+            border-radius: 15px;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            /* Yellow Shadow */
+            box-shadow: 0 10px 30px rgba(250, 204, 21, 0.5);
+        }
+
+        #loading-user {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10002;
+        }
+
+        #loading-user.active {
+            display: flex;
+        }
+
+        .loading-user-content {
+            text-align: center;
+            color: #fff;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top: 4px solid #facc15; /* Yellow Spinner */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-user-content p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -111,17 +407,17 @@
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(251, 191, 36, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 20px;
             z-index: 1000;
             padding: 1rem 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(251, 191, 36, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         nav:hover {
             transform: translateX(-50%) translateY(-2px);
-            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .nav-container {
@@ -135,29 +431,27 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--dark-yellow);
-            letter-spacing: 1px;
+            color: var(--primary-yellow); /* Yellow logo text */
         }
 
         .logo-icon {
-            width: 35px;
-            height: 35px;
+            width: 28px;
+            height: 28px;
             background: var(--gradient-primary);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             animation: logoGlow 3s ease-in-out infinite;
-            box-shadow: 0 0 20px var(--glow-yellow);
-            font-size: 1.3rem;
+            box-shadow: 0 0 20px var(--glow-yellow); /* Yellow glow */
         }
 
         @keyframes logoGlow {
             0%, 100% { box-shadow: 0 0 20px var(--glow-yellow); }
-            50% { box-shadow: 0 0 30px var(--glow-yellow), 0 0 40px rgba(251, 191, 36, 0.3); }
+            50% { box-shadow: 0 0 30px var(--glow-yellow), 0 0 40px rgba(250, 204, 21, 0.3); }
         }
 
         .nav-links {
@@ -169,7 +463,7 @@
         .nav-links a {
             color: var(--text-dark);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.9rem;
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
@@ -189,7 +483,7 @@
         }
 
         .nav-links a:hover {
-            color: white;
+            color: #000; /* Text color change for yellow background */
             transform: translateY(-1px);
         }
 
@@ -197,25 +491,71 @@
             opacity: 1;
         }
 
-        .server-info-btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .user-profile-nav {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+            gap: 0.75rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .server-info-btn:hover {
+        .user-profile-nav:hover {
+            background: rgba(250, 204, 21, 0.1); /* Yellow hover */
+        }
+
+        .user-avatar-nav {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid #eab308; /* Yellow border */
+        }
+
+        .user-name-nav {
+            font-weight: 600;
+            color: var(--primary-yellow); /* Yellow text */
+            font-size: 0.9rem;
+        }
+
+        .profile-dropdown {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            min-width: 180px;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .profile-dropdown.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        .logout-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .logout-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
         }
 
         /* Hero Section */
@@ -238,56 +578,40 @@
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            background: rgba(251, 191, 36, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            border: 2px solid var(--primary-yellow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out;
-            box-shadow: 0 8px 32px rgba(251, 191, 36, 0.3);
-            color: var(--primary-yellow);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-badge::before {
-            content: '🥊';
-            font-size: 1.2rem;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            box-shadow: 0 8px 32px rgba(250, 204, 21, 0.2); /* Yellow shadow */
         }
 
         .hero h1 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: clamp(3.5rem, 10vw, 8rem);
+            font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--light-yellow) 100%);
+            /* Yellow Gradient */
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-yellow) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1;
+            line-height: 1.1;
             animation: fadeInUp 0.8s ease-out 0.2s both;
-            letter-spacing: 3px;
-            text-shadow: 0 0 60px rgba(251, 191, 36, 0.5);
+            letter-spacing: -0.02em;
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 3rem;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             animation: fadeInUp 0.8s ease-out 0.4s both;
-            line-height: 1.8;
         }
 
         @keyframes fadeInUp {
@@ -315,111 +639,48 @@
 
         .section-badge {
             display: inline-block;
-            background: rgba(251, 191, 36, 0.15);
-            color: var(--primary-yellow);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
             font-size: 0.9rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            border: 2px solid var(--primary-yellow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(20px);
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .section-title {
-            font-family: 'Bebas Neue', cursive;
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--light-yellow) 100%);
+            /* Yellow Gradient */
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--accent-yellow) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: 2px;
+            letter-spacing: -0.02em;
         }
 
         .section-description {
             font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.7);
             max-width: 700px;
             margin: 0 auto;
-            line-height: 1.8;
         }
 
-        /* Bio Card */
-        .bio-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(251, 191, 36, 0.2);
-            padding: 3rem;
-            border-radius: 30px;
-            margin-bottom: 4rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bio-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .bio-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(251, 191, 36, 0.4);
-            box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3);
-        }
-
-        .bio-content {
+        /* Project Grid */
+        .project-grid {
             display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .bio-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
-            border: 4px solid var(--primary-yellow);
-            box-shadow: 0 0 30px var(--glow-yellow);
-            object-fit: cover;
-        }
-
-        .bio-text h3 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2.5rem;
-            color: var(--primary-yellow);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .bio-text p {
-            font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.8;
-        }
-
-        /* Info Grid */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 4rem;
         }
 
-        .info-card {
+        .project-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-            border: 2px solid rgba(251, 191, 36, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 2.5rem;
             border-radius: 24px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -427,248 +688,246 @@
             overflow: hidden;
         }
 
-        .info-card::after {
+        .project-card::after {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
             width: 0;
             height: 0;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
+            /* Yellow radial gradient */
+            background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, transparent 70%);
             transition: all 0.4s ease;
             transform: translate(-50%, -50%);
             z-index: -1;
         }
 
-        .info-card:hover::after {
+        .project-card:hover::after {
             width: 300px;
             height: 300px;
         }
 
-        .info-card:hover {
+        .project-card:hover {
             transform: translateY(-12px) scale(1.02);
-            border-color: rgba(251, 191, 36, 0.4);
-            box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            /* Yellow Shadow */
+            box-shadow: 0 25px 50px rgba(250, 204, 21, 0.3);
         }
 
-        .info-card-image {
-            width: 100%;
-            height: 250px;
-            border-radius: 15px;
+        .project-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 1.5rem;
-            object-fit: cover;
-            border: 2px solid rgba(251, 191, 36, 0.3);
+            box-shadow: 0 0 30px var(--glow-yellow); /* Yellow glow */
+            transition: all 0.4s ease;
         }
 
-        .info-card h3 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2rem;
-            color: var(--primary-yellow);
+        .project-card:hover .project-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 40px var(--glow-yellow);
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
+            color: white;
         }
 
-        .info-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
+        .project-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 2rem;
             font-size: 1.05rem;
         }
 
-        .info-card .stat {
-            display: inline-block;
-            background: rgba(251, 191, 36, 0.2);
-            color: var(--primary-yellow);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            border: 1px solid var(--primary-yellow);
-        }
-
-        /* Server Info Modal */
-        #server-info-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            display: none;
-            justify-content: center;
+        .project-btn {
+            display: inline-flex;
             align-items: center;
-            z-index: 10003;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        #server-info-modal.active {
-            display: flex;
-        }
-
-        .server-info-content {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
-            padding: 50px;
-            border-radius: 30px;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            max-height: 90vh;
-            overflow-y: auto;
-            border: 2px solid var(--primary-yellow);
-        }
-
-        @keyframes scaleIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .server-info-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .server-info-header h2 {
-            color: var(--primary-yellow);
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2.5rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .close-btn {
-            background: rgba(255, 255, 255, 0.1);
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: #000; /* Text color change for yellow background */
             border: none;
-            color: #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 24px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3); /* Yellow shadow */
         }
 
-        .close-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
+        .project-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(250, 204, 21, 0.5);
         }
 
-        .server-info-grid {
-            display: grid;
-            gap: 25px;
-        }
-
-        .info-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid rgba(251, 191, 36, 0.3);
-        }
-
-        .info-item-label {
-            color: var(--primary-yellow);
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .info-item-value {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .spec-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .software-list {
-            display: grid;
-            gap: 15px;
-        }
-
-        .software-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .software-name {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .software-version {
-            color: var(--primary-yellow);
-            font-size: 14px;
-            font-weight: 700;
-            background: rgba(251, 191, 36, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-
-        /* Watermark */
-        .watermark {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(251, 191, 36, 0.15);
+        /* Music Box - kept for structure but colors adjusted */
+        .music-box {
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.1) 0%, rgba(250, 204, 21, 0.1) 100%);
             backdrop-filter: blur(20px);
-            border: 2px solid var(--primary-yellow);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--primary-yellow);
-            z-index: 999;
-            box-shadow: 0 8px 32px rgba(251, 191, 36, 0.3);
-            animation: pulse 3s ease-in-out infinite;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            padding: 3rem;
+            border-radius: 30px;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
         }
 
-        @keyframes pulse {
+        .music-box::before {
+            content: '💻'; /* Changed to a computer emoji */
+            position: absolute;
+            font-size: 150px;
+            opacity: 0.05;
+            right: -20px;
+            top: -20px;
+            animation: musicFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes musicFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .music-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(234, 179, 8, 0.3);
+            border-color: rgba(234, 179, 8, 0.5);
+        }
+
+        .music-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #a16207, #facc15); /* Yellow/Gold Gradient */
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+            animation: musicPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes musicPulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(250, 204, 21, 0.7); }
+        }
+
+        .music-box h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .music-box p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Company Section */
+        .company-card {
+            background: var(--gradient-primary);
+            padding: 4rem;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 25px 50px rgba(250, 204, 21, 0.4); /* Yellow Shadow */
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .company-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 35px 70px rgba(250, 204, 21, 0.6); /* Yellow Shadow */
+        }
+
+        .company-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            color: #000; /* Text color for yellow background */
+        }
+
+        .company-card p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+            color: rgba(0, 0, 0, 0.8); /* Text color for yellow background */
+        }
+
+        .company-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            background: white;
+            color: var(--primary-yellow); /* Yellow text */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         /* Footer */
         footer {
-            background: var(--darker-bg);
+            background: var(--darker-blue);
             padding: 3rem 2rem;
             text-align: center;
-            border-top: 2px solid rgba(251, 191, 36, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 100px;
         }
 
         .footer-content p {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
         }
 
-        .footer-highlight {
-            color: var(--primary-yellow);
-            font-weight: 700;
+        .hosting-credit {
+            color: var(--accent-yellow); /* Yellow text */
+            font-weight: 600;
         }
 
         /* Mobile Navigation */
@@ -681,9 +940,9 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             padding: 15px 0;
-            box-shadow: 0 -4px 30px rgba(251, 191, 36, 0.2);
+            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            border-top: 2px solid var(--primary-yellow);
+            border-top: 1px solid rgba(250, 204, 21, 0.2); /* Yellow border */
         }
 
         .mobile-nav-content {
@@ -706,7 +965,7 @@
         }
 
         .nav-item:hover {
-            background: rgba(251, 191, 36, 0.1);
+            background: rgba(250, 204, 21, 0.1); /* Yellow hover */
         }
 
         .nav-item svg {
@@ -717,22 +976,40 @@
         .nav-item span {
             font-size: 12px;
             font-weight: 600;
-            color: var(--dark-yellow);
+            color: var(--primary-yellow); /* Yellow text */
         }
 
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        #mobile-profile-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Kept dark */
+            z-index: 10002;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .animate-on-scroll.animated {
-            opacity: 1;
+        #mobile-profile-modal.active {
             transform: translateY(0);
         }
 
-        /* Responsive */
+        .mobile-profile-content {
+            padding: 60px 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .mobile-profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #eab308; /* Yellow border */
+            margin: 0 auto 30px;
+        }
+
+        /* Responsive styles remain the same */
         @media (max-width: 768px) {
             nav {
                 top: 10px;
@@ -742,7 +1019,7 @@
                 padding: 1rem;
             }
 
-            .nav-links {
+            .nav-links, .user-profile-nav {
                 display: none;
             }
 
@@ -762,30 +1039,28 @@
                 padding: 80px 1rem;
             }
 
-            .bio-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .bio-image {
-                margin: 0 auto;
-            }
-
-            .info-grid {
+            .project-grid {
                 grid-template-columns: 1fr;
             }
 
-            .server-info-content {
-                padding: 30px 20px;
+            .music-box {
+                padding: 2rem;
             }
 
-            .spec-grid {
-                grid-template-columns: 1fr;
+            .company-card {
+                padding: 2.5rem;
             }
+        }
 
-            .watermark {
-                display: none;
+        @media (min-width: 769px) {
+            .mobile-nav {
+                display: none !important;
             }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -797,237 +1072,334 @@
         <div class="orb"></div>
     </div>
 
-    <!-- Navigation -->
+    <div id="security-screen">
+        <div class="security-content">
+            <div class="security-shield">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L3 6V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V6L12 2Z" stroke="white" stroke-width="2"/>
+                    <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="security-text">SPACE SECURITY+</div>
+            <div class="security-subtext">Sedang Memeriksa Keamanan...</div>
+            <div class="security-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loading-text">SEDANG MEMUAT WEBSITE</div>
+    </div>
+
+    <div id="username-modal">
+        <div class="username-content">
+            <div class="security-badge">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L3 6V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V6L12 2Z" stroke="#facc15" stroke-width="2"/>
+                </svg>
+            </div>
+            <h2>Verifikasi Keamanan</h2>
+            <div class="security-info">
+                <strong>SPACE SECURITY+</strong>
+                Untuk alasan keamanan dan mencegah bot masuk ke website ini, kami memerlukan verifikasi identitas Anda. Silakan masukkan nama pengguna Anda untuk melanjutkan.
+            </div>
+            <input type="text" class="username-input" id="username-input" placeholder="Masukkan nama Anda..." />
+            <button class="submit-btn" onclick="submitUsername()">Verifikasi & Masuk</button>
+        </div>
+    </div>
+
+    <div id="loading-user">
+        <div class="loading-user-content">
+            <div class="spinner"></div>
+            <p>Sedang Memuat User<br>Mohon Bersabar...</p>
+        </div>
+    </div>
+
+    <div id="mobile-profile-modal">
+        <div class="mobile-profile-content">
+            <img src="https://ui-avatars.com/api/?name=SUKI67OFFICIAL&background=eab308&color=000&size=200" alt="Profile" class="mobile-profile-avatar" id="mobile-avatar">
+            <div class="mobile-profile-name" id="mobile-username">SUKI67OFFICIAL</div>
+            <button class="mobile-logout-btn" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <div class="logo-icon">🥊</div>
+                <div class="logo-icon"></div>
                 SUKI67OFFICIAL
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#info">Info Fighter</a></li>
+                <li><a href="#projects">Materi</a></li>
+                <li><a href="#company">Konsep</a></li>
             </ul>
-            <button class="server-info-btn" onclick="openServerInfo()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="5" rx="1" stroke="white" stroke-width="2"/>
-                    <rect x="2" y="10" width="20" height="5" rx="1" stroke="white" stroke-width="2"/>
-                    <rect x="2" y="17" width="20" height="5" rx="1" stroke="white" stroke-width="2"/>
-                </svg>
-                Server Info
-            </button>
+            <div class="user-profile-nav" id="user-profile" onclick="toggleDropdown()">
+                <img src="https://ui-avatars.com/api/?name=SUKI67OFFICIAL&background=eab308&color=000&size=100" alt="Profile" class="user-avatar-nav" id="user-avatar">
+                <span class="user-name-nav" id="user-name">User</span>
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <button class="logout-btn" onclick="logout()">Log Out</button>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Mobile Navigation -->
     <div class="mobile-nav">
         <div class="mobile-nav-content">
             <div class="nav-item" onclick="scrollToTop()">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#f59e0b" stroke-width="2"/>
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#eab308" stroke-width="2"/>
                 </svg>
                 <span>Home</span>
             </div>
-            <div class="nav-item" onclick="scrollToSection('about')">
+            <div class="nav-item" onclick="scrollToSection('projects')">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="8" r="4" stroke="#f59e0b" stroke-width="2"/>
-                    <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#eab308" stroke-width="2"/>
+                    <path d="M3 9H21M9 3V21" stroke="#eab308" stroke-width="2"/>
                 </svg>
-                <span>About</span>
+                <span>Materi</span>
             </div>
-            <div class="nav-item" onclick="openServerInfo()">
+            <div class="nav-item" onclick="showMobileProfile()">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="5" rx="1" stroke="#f59e0b" stroke-width="2"/>
-                    <rect x="2" y="10" width="20" height="5" rx="1" stroke="#f59e0b" stroke-width="2"/>
-                    <rect x="2" y="17" width="20" height="5" rx="1" stroke="#f59e0b" stroke-width="2"/>
+                    <circle cx="12" cy="8" r="4" stroke="#eab308" stroke-width="2"/>
+                    <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-                <span>Server</span>
+                <span>Profile</span>
             </div>
         </div>
     </div>
 
-    <!-- Server Info Modal -->
-    <div id="server-info-modal">
-        <div class="server-info-content">
-            <div class="server-info-header">
-                <h2>Informasi Server</h2>
-                <button class="close-btn" onclick="closeServerInfo()">&times;</button>
-            </div>
-            
-            <div class="server-info-grid">
-                <div class="info-item">
-                    <div class="info-item-label">VM ID</div>
-                    <div class="info-item-value">spacestorevm54</div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-item-label">VM Name</div>
-                    <div class="info-item-value">singapore-amdepyc7763-spacestorevm</div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-item-label">VM Region</div>
-                    <div class="info-item-value">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#fbbf24" stroke-width="2"/>
-                            <circle cx="12" cy="9" r="2.5" stroke="#fbbf24" stroke-width="2"/>
-                        </svg>
-                        SINGAPORE
-                    </div>
-                </div>
-
-                <div class="info-item" style="grid-column: 1 / -1;">
-                    <div class="info-item-label">VM Specification</div>
-                    <div class="spec-grid">
-                        <div class="info-item">
-                            <div class="info-item-label">RAM</div>
-                            <div class="info-item-value">64GB DDR5</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-item-label">Processor</div>
-                            <div class="info-item-value">AMD Epyc 7763 (122) @ 3.5GHz</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-item-label">Storage</div>
-                            <div class="info-item-value">233GB NVMe SSD</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-item" style="grid-column: 1 / -1;">
-                    <div class="info-item-label">Software</div>
-                    <div class="software-list">
-                        <div class="software-item">
-                            <span class="software-name">Nginx</span>
-                            <span class="software-version">v1.26.2</span>
-                        </div>
-                        <div class="software-item">
-                            <span class="software-name">Node.js</span>
-                            <span class="software-version">v22.11.0</span>
-                        </div>
-                        <div class="software-item">
-                            <span class="software-name">Docker</span>
-                            <span class="software-version">v27.3.1</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-item" style="grid-column: 1 / -1; background: rgba(251, 191, 36, 0.2); border-color: rgba(251, 191, 36, 0.4);">
-                    <div class="info-item-label">Operated By</div>
-                    <div class="info-item-value" style="font-size: 24px;">SPACE STORE INDONESIA</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Watermark -->
-    <div class="watermark">
-        ⚡ Di operasikan oleh SPACE STORE INDONESIA
-    </div>
-
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-badge">
-                Boxing Legend
-            </div>
+            <div class="hero-badge">👋 Selamat Datang</div>
             <h1>SUKI67OFFICIAL</h1>
-            <p class="hero-subtitle">Nama saya Ishak Patay. Saya adalah siswa dari Sekolah Kristen Kasih Bangsa. Saya ingin membuat blog tentang Gervonta Davis, salah satu petinju terbaik di dunia yang menginspirasi saya dengan skill dan dedikasinya di atas ring.</p>
+            <p class="hero-subtitle">Halo, di website ini saya akan menjelaskan materi lengkap tentang Hardware dan Software, dari pengertian dasar, jenis-jenis, hingga interaksi dan konsep mendalamnya. (scroll kebawah untuk melihat penjelasan)</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about">
+    <section class="section" id="projects">
         <div class="section-header animate-on-scroll">
-            <div class="section-badge">Profil Petinju</div>
-            <h2 class="section-title">Tentang Gervonta Davis</h2>
-            <p class="section-description">Mengenal lebih dekat sosok "Tank" Davis, petinju Amerika yang fenomenal</p>
+            <div class="section-badge">Materi Inti</div>
+            <h2 class="section-title">Materi Lengkap tentang Hardware dan Software</h2>
         </div>
 
-        <div class="bio-card animate-on-scroll">
-            <div class="bio-content">
-                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSeof_6ZDnFrFip10axjtcJ0CeFKf1Zf-8jPLHGS_SHPcEmBBZMpTXFE1K4kenIfzKsguGJtjqGr5A4Istnjkf5k1bKm5MK0fAV-5O4dn-34fch_GV6qOAAdvO7YxJHJy3chFndFuM3CoCO&s=19" alt="Gervonta Davis" class="bio-image">
-                <div class="bio-text">
-                    <h3>Gervonta Davis</h3>
-                    <p><strong>Nama Lengkap:</strong> Gervonta Davis<br>
-                    <strong>Julukan:</strong> "Tank"<br>
-                    <strong>Tanggal Lahir:</strong> 7 November 1994<br>
-                    <strong>Tempat Lahir:</strong> Baltimore, Maryland, USA<br>
-                    <strong>Tinggi:</strong> 166 cm (5'5")<br>
-                    <strong>Reach:</strong> 168 cm (67.5")<br>
-                    <strong>Stance:</strong> Southpaw (Kidal)<br><br>
-                    
-                    Gervonta Davis adalah petinju profesional Amerika yang dikenal dengan kekuatan pukulannya yang luar biasa dan kecepatan refleksnya. Dijuluki "Tank" karena gaya bertarungnya yang agresif dan tangguh, Davis telah menjadi juara dunia di beberapa kelas berat.</p>
+        <div class="project-grid">
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+                        <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5h-.5a.5.5 0 0 0 0 1H2v3H1.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v.5a.5.5 0 0 0 1 0V14h3v.5a.5.5 0 0 0 1 0V14A2.5 2.5 0 0 0 14 11.5h.5a.5.5 0 0 0 0-1H14v-3h.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V1.5a.5.5 0 0 0-1 0V2h-3V1.5a.5.5 0 0 0-1 0zM4.5 3C3.672 3 3 3.672 3 4.5v7c0 .828.672 1.5 1.5 1.5h7c.828 0 1.5-.672 1.5-1.5v-7c0-.828-.672-1.5-1.5-1.5z"/>
+                    </svg>
                 </div>
+                <h3>1. Pengertian dan Konsep Dasar</h3>
+                <p>
+                    *Hardware* adalah bagian fisik komputer yang bisa dilihat dan disentuh, seperti prosesor, memori, hard disk, keyboard, dan monitor. Hardware berperan sebagai wadah dan pelaksana tugas-tugas komputasi.
+                    <br><br>
+                    *Software* adalah kumpulan instruksi atau program yang memberi perintah pada hardware agar menjalankan tugas tertentu. Software bersifat abstrak dan tidak bisa disentuh, yang menentukan bagaimana hardware berfungsi.
+                    <br><br>
+                    Keduanya saling bergantung: **hardware tanpa software tidak akan berguna**, dan **software tidak bisa berjalan tanpa hardware**.
+                </p>
+                <a href="#projects" class="project-btn">Baca Lebih Lanjut</a>
+            </div>
+
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-hdd-rack-fill" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M2 7a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1"/>
+                    </svg>
+                </div>
+                <h3>2. Jenis-jenis Hardware</h3>
+                <p>
+                    Hardware dikelompokkan berdasarkan fungsinya dan bekerja berdasarkan prinsip elektronik dan listrik:
+                    <ul>
+                        <li>**Unit Input**: Perangkat untuk memasukkan data (keyboard, mouse, scanner).</li>
+                        <li>**Unit Output**: Perangkat yang menampilkan hasil pemrosesan (monitor, printer, speaker).</li>
+                        <li>**Unit Prosesor (CPU)**: Otak komputer yang memproses data dan instruksi.</li>
+                        <li>**Memori**: Tempat menyimpan data sementara (RAM) dan permanen (hard disk, SSD).</li>
+                        <li>**Motherboard**: Papan sirkuit utama yang menghubungkan semua komponen.</li>
+                    </ul>
+                </p>
+                <a href="#projects" class="project-btn">Lihat Detail</a>
+            </div>
+
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-window-split" viewBox="0 0 16 16">
+                        <path d="M7.75 3.5c0 .167-.139.25-.25.25s-.25-.083-.25-.25V3h.5zM7.75 4c0 .167-.139.25-.25.25s-.25-.083-.25-.25v.5h.5z"/>
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 2a.5.5 0 0 0-.5.5V4h13V2.5a.5.5 0 0 0-.5-.5zm12 12a.5.5 0 0 0 .5-.5v-9H1.5v9a.5.5 0 0 0 .5.5z"/>
+                        <path d="M7.5 5.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                    </svg>
+                </div>
+                <h3>3. Jenis-jenis Software</h3>
+                <p>
+                    Software adalah kumpulan kode dari bahasa pemrograman yang diterjemahkan menjadi instruksi mesin yang dimengerti hardware.
+                    <ul>
+                        <li>**System Software**: Mengelola hardware dan menyediakan layanan dasar (Contoh: Operating System - Windows, Linux).</li>
+                        <li>**Application Software**: Program untuk tugas khusus pengguna (Contoh: Microsoft Word, browser web, game).</li>
+                        <li>**Programming Software**: Alat untuk membuat software lain (Contoh: compiler, IDE).</li>
+                        <li>**Utility Software**: Program untuk membantu pengelolaan sistem (Contoh: antivirus, disk cleanup).</li>
+                    </ul>
+                </p>
+                <a href="#projects" class="project-btn">Telusuri Program</a>
+            </div>
+
+            <div class="project-card animate-on-scroll">
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                        <path d="M11 5a2 2 0 1 0-3.151 1.63L3.89 10.32a2 2 0 1 0 0 3.36l4.958-3.31a2 2 0 1 0 3.15-.052L11 5z"/>
+                    </svg>
+                </div>
+                <h3>4. Hubungan dan Interaksi</h3>
+                <p>
+                    Hubungan keduanya sangat erat:
+                    <ul>
+                        <li>**Instruksi**: Software memberikan instruksi dalam bentuk kode yang **CPU jalankan**.</li>
+                        <li>**Kontrol**: CPU membaca instruksi dari memori, memprosesnya, dan **mengontrol perangkat keras lain**.</li>
+                        <li>**Manajemen OS**: OS (*System Software*) mengelola sumber daya hardware, seperti manajemen file, memori, dan perangkat input/output.</li>
+                    </ul>
+                    Intinya, Software adalah **perintah**, dan Hardware adalah **pelaksana** perintah tersebut.
+                </p>
+                <a href="#projects" class="project-btn">Pahami Proses</a>
             </div>
         </div>
     </section>
 
-    <!-- Info Section -->
-    <section class="section" id="info">
-        <div class="section-header animate-on-scroll">
-            <div class="section-badge">Prestasi & Karir</div>
-            <h2 class="section-title">Informasi Petinju</h2>
-            <p class="section-description">Pencapaian luar biasa dari karir Gervonta Davis</p>
-        </div>
-
-        <div class="info-grid">
-            <div class="info-card animate-on-scroll">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRd097BaYq-0hWO-LiJWS5BR-6x0n6Kr1mPGFOolLBCoMCM2zbbHXChHHmSdaoIxP-w91bBW35NKDyP6CFGsS5AYSNqDppVlD1CWTXMY88&s=10" alt="Record" class="info-card-image">
-                <h3>Rekor Pertandingan</h3>
-                <p>Gervonta Davis memiliki rekor yang mengesankan dengan mayoritas kemenangan melalui knockout. Hingga saat ini, "Tank" telah mengumpulkan rekor yang luar biasa dengan persentase knockout yang tinggi, membuktikan dirinya sebagai salah satu puncher terbaik di kelasnya.</p>
-                <span class="stat">29 Menang - 0 Kalah</span>
-                <span class="stat">27 KO</span>
-            </div>
-
-            <div class="info-card animate-on-scroll">
-                <img src="data:image/jpeg;base64,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" alt="Titles" class="info-card-image">
-                <h3>Gelar Juara Dunia</h3>
-                <p>Davis telah memenangkan berbagai gelar juara dunia di beberapa kelas berat yang berbeda. Dia pernah menjadi juara WBA (Super) Lightweight, WBA (Regular) Super Featherweight, dan IBF Super Featherweight. Pencapaian ini menunjukkan kemampuannya beradaptasi di berbagai kelas.</p>
-                <span class="stat">Multi-Division Champion</span>
-            </div>
-
-            <div class="info-card animate-on-scroll">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISERUSExAWFhUVGBUXFhcVGBUVFhUYGBgXFhcXFhgYHSggGBolHRUXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi8lHyUvLS8tLS0tLTUrLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPAA0gMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABEEAABAwIEAgcGAwUGBQUAAAABAAIRAyEEBRIxQVEGEyJhcYGRBzJSobHBFELwFWJyktEjQ1OCouEkM2Oy8RYXwtLi/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAEDAgQF/8QAKBEAAgICAgEEAgEFAAAAAAAAAAECEQMhEjETBCJBUWFxgTJSseHw/9oADAMBAAIRAxEAPwDH2lLMckAEq1aTGOQVN9DsEamLpng1wJUCxTHR7NPw9TVEjitxq9mJXWj07lhAYPBMekOaNpMLiJjks/wftRw1NgnVPcCVXOlXtIZWaW0muk8xEKvtTuyFSaqiRx/tcaxzmCg6QSNwoX/15iMbWbT9xkieJInZZzVeXEuO5MlK4LFOpPD27hT8rsr4Y0esOj9VvVNA5BP8VVELBcm9qhotDXUiSOR/3UsPbDTO9F3681t8G7snxklVGuYR7Z2TnEVRCyKj7XMPxpuHkkcw9qHWgsw9Co9xtYHjtKHxu7BKXSRr2FqgqF6aZY/EYd7GP0uIMEKqdDekGKIivh3Ndyls/wAs6vkrQ7pDRNnVA3uf2fHdNU3aYOM0qaMjf0czmhdmIc4D94n6ppjOkWb0mltVhI56Z+i2zDY6hVEsqMf/AAuDvom2a4ZhaZAWuH0xcv7keZ8xx1Ss8uqGT9E1Vw9oOXU6dQOYACTcBU5c0009nRFprQEEEFk0BBBBABIIIIACCCCAAggggBcOXbSm0roFIY8a5LNKYtclmOWkIXeE2qNS8pKohgIEIQg8rjUkM7hSGW5LVrnsNtxJsB5+Sa4Ggajg0c1e8sLmGaYHYadG13mAHeRvvwWXKiuPHyI45bhsCQKwNWp8IJbHdAP137k2xWe1XAto0xRZsAzs/MCdipdnR6e3Wqkv/PfU48Z+aeUcipg6gCR+UcLcypvIjrWCT60ilNxddn5z6mQeYKkMB0grj++c7fVquRxmTcp5muQEy5ju1uQbengq3XoFhuLjcc/FaUkyM4Sgy1Mx7HguNOKgBOpljEx7zfFLUel2JaC3rXOZ+XWdbhyk7qt5fjix0tIBdMj4e7kpx2IoYlhD2inWIhrxOhw/faD2fEei0pOPRmUYzWytZ9ia1SoetN5Mbx5SoyFNVaBOqi8AOZ7pkkkk7DmIUO8QSDwstXZBwo4hCF1KEoEcwihdyhKBHEILtEkBygukITCjlBdQggdHKMIIJDOmlKtKRC7aUAOGFdOCSYUqFoyN6jUiQnj2pu9qTGWDoLhDVrmmBct3I2uJM8Fp1LL6NPS15DnAQGjtf6W/dZz0FLgaxAtFNvGLlxO1z7otxVtZmgI0sY5xn3QOqb6MifMrkzSfKj1vRwXjTJ+rXaz3WAE/wg+kyhQxRJ2UbTNNrdVTq6XEiGa/K3zKb08/wodAc89/D5KHFnbzitWSXSatNCCNyPus1zmg0G31N1pGJYzEN7LtTeHCFWs3yQuBaDMbWvO8SqwlRz5ockUHrNJ3gEibJ1SrSfeBvaLHzCGOy94nsHs79yZ4aqbbGPIjwXUnZ5ck4umSWbuPWNdEnszOxsAmOatnS8cRB8Rae+b+ieZw1pAc0+8BI4ghNj2qRG3EDfgCAPQpoU+2RqCEILREKUJRoQgQUo5RQhCADlDUiQQAepBEggDqUJXKCBnUroFcI0gFmuSzXJqClGlMBwSknhdNKNwWhFi6MYjRh3BrQXOqdpx/I0NGkN7zLrq45fjGloiJA4Rf0WcZZii1tSmPzAFvi2Z+R+StHQnLKr6tFxeYc52tjgJ0gbjxP2XHmhtnqely+1IUznEAuJNzzKhsFm7zULadMugSY5DcrR866M0apnSQTxBt5qEwPR9mEeS2ziILiHEkTMC8AeSlGUa2dc4TbXHQzyzPQTbsniFYWRUE6YPMJfDZdTe27GnjMAJ0+kxjYBWL+itfDKrnWHJa4xBHvRxHBwWdVKOmoW8N9p778YWqYyr2piRBB9bKo9JsKCGOaBP14q2OdOjl9Vh5Rv6G9LIutpj/AImiwuEtBLzbvhtlC1sM6jqp1LOBIsZBsbjxBBHcVYMkwwqNLXUSQZisC7skC0mYUT0gPbI1SWAMcY3IAP3I8lSE3zaIZ8MFhU12QZCJduSaueaGgiQTEGgiQQAaJEjQAaCJBIAIIIJgGEEAukhhBdtXK6CYhVhSoSLUs1aAdZRQL8RSa3cvafIHU7/SCtb6L02MD3utIIbPjusqySsGYim51gHQTyDgWk/6las4q12vBpuboMCHTY32i/Bcue+SR6XoGlCTLy7MQZDHtJ4gm48lFVMQX+9z9FSMNkBdW659c036twCQeETaRaFfKOWwz3tR58yuaao9LHPl2qGxrltg4pF+JK6r0oN1FY3EaeKwkacqFq9exUdnYimx3Iyk2YlxMR9+KXzQ6mgbQHb+FvmqVTJylabEMpx7aeEY1x1PLnFjJNiSYc4DccfRVXF0oc4Hd3aPe6TJPjPzUxlmGDHMcdz9oTPpUxvWy0WLRPcZd9oXRBJSPNzNvGr+CCqtIsRBSKdzLCDu24PMcQmpV0cDCQhGF1CAE0F1CEIEcoIyEITAJBGggA0S6IRQgABdSuIRoAMlAFEggBVrkqxybhKNKYh00q04DOXik135m2kgGY434wqk1yf4KsPcc4hroE/D3/MrOSNo6PTZfHPZZDnL2jWa294cZn/Kd04Z0hD7t1sceLWvDD3wRZHhqeCw41MpCeJqOL/k6wKWpZgK15kfLwXJKvg9pxlXukr/AAPG4vW0E7xfxUXiqOr1Ttjb2ELrEODRJMKXTDtbGlNoZc7iVE5pj9TtIMDiUlmmaanaWSBxO0+CZPEDyBlWhD5ZyZs2qiSeBcbOcZjbh3pHpHgAKYqie1pc682u2wO2wR0SAztHhb9eKnMHpcGOqNDgZGk3BBsQQfFU6ZGlKNMzus4cNkiVq9XozllVurqH0zx6p7hB/hdITWv7McO4A0sZUaTwqMY/5tLVryRXZB+myPaVmZBdq05j7PcZTk0jTxDQf7p3aP8AkdEnuBKq9RjmuLXNLXCxa4EOB5EG4VE0+iMoSj2goRwi1Ii5BkIokCUSADQRIIELkLghAFdaUDCAXWlc6ShJTA60oaVzqRa0Adhq6AUnkHRvGY0xhsO54mC+zabfF7oHlutCy/2YUMOA/MMTqJ/uaFge41Dc+WlF0ajBy6M9yPJ62KqilRbJ3c42YwfE93AfM8JWk4HoxgsCwvewYquIvUjqmm3uU+Ini6fJK5hm9Ckx1HC0hQawghrd38yT+Y95SXRTKamYVXAPOiIrOO7Z2A5uN49VKU5Po6oYYQVyIPNcrqYqpop0HOq1CXaaTRDQTfUBZje8wFdujnsyrBgFeoykPgYNb/N3ug+ErSspyqjhaYp0maQAJO7nRxc43cU7lNQXyYfqZX7dFbwvQjBsEFjn97nn/wCMBMs59nGCrtIbrpO4OY4uv3tfIPy8VcJRStcI/RPy5PtnmPpB0WrYPEOoVSDEFrhtUYTZ4G45Rzkd6SOHv7saRu7buJ7pK3X2ldHTisL1lNs1qMuYBu5pHaZ38CO9oWCV8TqO5iBMmZMbwsSTstCUXG/k7e0EyXkx3QPLuUxh2TSnkf1+u5QAqiY3PC5/qpzAvGjQJAMFzjsImIlZ6KR2K0sc9hbrJIAc48yNmqRo47TTk2c+17kNn6pnhsIIOsatItuARBcJ8P6JTE0wH+9qAEzwkjh3BYkkWg2iTw2cw8AAhjRDTHH4k7q5NTzBkVqBdaPxHuvaf3SN/AyFWGVLzw3De7gTyCsGHzh9NrGOf4N2a2bxHE+KF7eh/wBap9FSzj2aV2F34esytH5CRTqR59l3qFTcdl9Wi7TVpPpnaHtLZ8CbHyW6sz5rRrcyTwAEJfB4gYrU2qxpputpcA4ec2VFN/JCXpYv+k89wihXb2gdDjg3ddSE0Hnx6tx2H8J4enJU1VTs4ZwcXTE0F2gmZO6bU9p0pTNhun9F6yUQOoTetThPS5NcQ8c90DaGJVw6CdERiSMRXB6gGGtuDWcDcAjZgNieOyh+jeTfiq4YZFNvaqEb6RwHedh5ngtXo4lrNLGjSGgBrQIa1oEABJyopixctvol3Z06gwU20w1jOy2nTENaOUDZV/M8W+uXNfexLTtHLdLZjj4bMA8yYt3qBrZmXNBDgSLGNwORlScrOxR49nNfBnsfmc4gRuTNgtq6JZKzB4dtIAaveqEfmedz5bDuAWUdCv8AiMxo76WaqjgYvoHZ2/ec0+S2YVwOKpjj8shnaekO3FcymT8zYPzBcNxwdsbfVVOZQZILiU2bi528+5cVqwLTB4R62R0NRYK+PuAG23vsQdiOf68856d9B2u1YqhTaHOlz6TR2nG5LmR+YwZbxO17G6ZtjmUmPqOBIY2waJc53ADlHPYKOp4w4yozSNNNg1SDxiZBgH/x3qGKHk90i3GUIqSWuv5MJpuY1odETIBjVxUllobUeJfO24P0Fgrl0xyGnTrnEMe0MeXammzesEdY0HgZv5u5KB6yj1Z0gtEgFxA5iQ0i6mvsuqpD38M6o/S2NIJ1EbAWsT/l2CYZ3Tc15gS3hy8wN01binn+zaYaTMC09/M7JpiXOYbOvfw8FvgJ5FXX8kllhApve7g6XE8YAgfNK0akN65wlzrUweH7367lBtD3aaYJ/tIJ/wDsVL5hUaXgT2WCIHPkO+ynLTLY7ktLr/P+iXwjjBI24zfgPVTGAqgREbW4KqYTGOIPDkAdlIsx8gdoTHKRKw9s7Yqo0WrMWMxFB9J4Ba4EHzHDv71gGZYN1Cs+k7djiJ5jgfMQfNbVhcSCNM+azT2i0QMUHj87Pm0kfQhWwy3R5/r8XsUvoq8oIkF0nknYcr/7P/Zzicwiq4mhhv8AEcJdU7qTTuP3jblNwnfsj9ngxrhi8S3/AIZjoYw/37mm8/8ATBseZtwK9CNAADWgAAAAAQABsABsEqN7K/kHQfL8GB1eGa543qVf7Soe+Xe74NACnMRhqb2lr6THNO4c1pB8iF2SilFDoptX2e4Zr3fhiMO2odT2hupsiw0iRpG9ha6iM09nmIYHPo121TwaR1Z8BJIPmQtGqMkR+guHYgCzjdJwTKqctUzDXYkMDqVWWPbLXMcIcD4KqOeW1D1cm52E78CFsHtWyhlXCuxAA6yiNROxdT/M0nuFx4d6xvAYrQ7Yxz5KXDjdHRLJz4pl19lL4x7i+zjSqN098sft4A/NXTpJnBB0NMeCyXIcc5mLZiW7tcbcxGkjzaSFdsyrioS9pkOuCtp6ok/sH4lzrl288fWE9oZlUZbUY5Dlyngq7WB5xF55J/hqwI3vslYJNlyyzMOsHb4bMHuDvPF57z6KXNaWmN+HlsqFQrlpsVYctx+oXK3d6Af4rCUqzZdULXAkg7jex0OtPeId3hFQf1DGUWkvqPhoLgC55A/5lQCIYNMk8YhOKQBuDHpHoUrRwTOsNQiXuAaXQAS0SQDG4ubKb8rjwXQ9DXpFkLcRgKlFolwBfTP/AFGy6RPMlw8CsWoOJw7hBMPEfynV9AvRFJyx7pzgmYd9RjacB9R72DgQe0TbcCYjwTceMUkaxq2/0VmlUs1zSOzIlx53j5qOqVCXQbknfnJ4JduGj82+zt2nmDySeNoQxrgIIDp0m0gi49Fm0mPjKS/QeMxrmVHabXAnjA4dwT+vTJPZdbf1Vfq4rU4k8pUlhsT2Gi5mx4qU11R04J7lvQu+s7aPQJxh3uAkiBz4/wC6Tw1TfY/r5J/Uw8donsj1lZTrR0uL7scUah3Dt/1sqz0/fJo8wHj/ALVMVSNMtd2uN58lVelFQl7ATcNJP+Y//lUxr3HN6zInia/RCII4RrpPGPZGXYNlKmylTaGsY0Na0bBoEABOHBctcuXvTK07DRxC4D0lUqoNcWxSpUiwUZmdEvYQDDo7J5H+iXfUSFSogoo0Yb0m6UV6uvDl7mta4tqg390w5p8wQq4zttMcxCmfafSDMxqNaP8AmtZUPiQWn5snzUFgKkdib/qYUJujcNuiVytgETzsOdoUpUzYU7NE8wNv/KZ0KEBhDSS4b3OkchyPepRjNTYAvtbf1Ur3Z0qLceKIbHYo1SJ1AfDwnu5lWHDgSDfYBsg25+B/oo9+C6stLnuMm08Od+cErjNcXWa0hjCBeXag4x3cQO9OT5UkZxrx25E/QqtdIDpLTBT/AA9Yt4rP8mxjqVTVMg2cOY5+IV3pVw4BzTI4K6OZ72WzLsbqCmKVSVQqOLLDIUzgM5Ljpb7x4nZg+I/YcVtMRcKL9Rj8o37zyVT6VdG6VZunUGvBxOINSIDQYJDwJJEBokfDN9lNYfEEgU6R2mXOuJ743vupJ9Wndr2QCI1G7SJmC4XAnnAR2HWzFKuVOpuNOtTLXC8HiOYPEJrmtFugiB3LYc06MtrS3TLXEuD5AdTJknTwIk+7sZ4RKx7P8PVw9XqqzdMiWl0t1tOxHLhbhsuTJjkna6PQw5oSjT7KPWBD9I42VjwGUtc0OdUIB9THK2yTy/ANq4gng0Hyk/r1VvwOGYG6ttg3y3t4IlMnjw1bfRGYLBBokg35j7lOMWGOEOqgdzb/AFG6uOCaNILvn8klXa2SQPVTi7kdbxvjrr/vyUrC4Nhnq2uLoMFwME/ZUnPmubiKjXG7SAf5Qfut3w2G1NMEbTZRWG9n2Fxj6lR4OsOh1yJsIPy+S6oRaZ52dKUKRh0oLev/AGiwfI/zFEq0zk8bL7h80Y4WcE4GJBWV08S5pkE+ql8Bn5bZyLK6L26sk3VFD4XNA/inJxQ5pjHL6iZ4jEQEnWxIHFVPpV0hFKm6DfgO9JgZ/wBPq/W457x+VrWekn6uKqlSqWua7kVIVMW55JcbySTzlRGIdJUe2EtK0W7C42GAgmDtBIPhbdSOIxxpvmJsJ4SVW8gxZFMgAEtMieX6+qkX4pxF2gnck39Fjjs6Fk9tpjvH4jrDMOE/vW9OCSFZw918eQ+yasqEiNuP65I24gNsY+iKFd7FThg4yDBJva3kOCeUMWaIs8nmLaUzGL5CRHiuK+K4EWPMfZPYLiiRo5w6ttY8QPtzTjBYstu5xa3kLFx5D+qiaVQQAIEcRaPJBz5IE7Xjnbgtp2SlCtmo5NnrYDGCDbUeHkrRhsZIsViGAzEtMK7ZPn0RJknZo38StmUzQKeI0EBpF79XIBge86mOfdt4cY7pL0WoZmxpJgiSyoLuabNIIO4MQQYgsbyVRwORMdivxTsRXc/XLTIhg4U5kmL7CLfOzdJukLMJS0NIFevsLAgQAah8BAHfHJPVC/Rj+VtFMYgFwJbVqM1DYhh0yO7ipnB1pZrFQSBIEC03jxKTxOU03NJpQwuu4D3QeccNuFlHU8nrMNiL34ieUSuVx3Z3RlpIsFXMajmw2XAEgkAQefptsipY+D2geZkxPgq07CVgbtc0TexIHfLZhOjiXuOoVJ4bxPfC3GKqkKWXIi4YfM2tHFs8iCL9zxdOckzvq8Rc2qNII2uLtJHDj6qm03vZ77b+tt/Nd164czUIY4AubBkW4RwPctW4snamvyat+2xzQXn4dMK/NBWs5fLEvmV40V6LKwbAfNjzaS1w8iCnRb4eqrWQ1x+zmN1XY58x+UPc5zXepcPIJXCZoYhxn9d6yxInhjTT/MR4J1Szd0WeD9VAVKocJ+/2CaHFBnam484HE+MJWMlc46VimINQTyaZd6DbzVCzPNH1n6ibTa/Dv5qLrGKjp4kn1v8AdACeKT2Fi9V8AlNdx80MS7hwCFJ0QnGNGJztjrLKul07Hmp81CTIHDhx5mFXhShxgxF0/bVMWN/r4d6xJWWxyaVMkHMcLwYO9tkjUaImUzq4tzgRO44725JAVO+VlJlJSj8D5r+HD6rvWmP4g8eG3cuuuJv4bcVqjHJDvUQd4H1lN8VWuINwSZRVKlki4E7CYREU3qkSVHEl/jxjfx8E/wADjSw+niq1TqQRwU1hs9awSKINT4iZb4x9luySL6ekQwdAVao1VXD+xozc/vv5D9clRa2Z4irUfWqkOqPuSeAGzWjg0cB/uobFYl1SoalQlzzuSfSOQSlMNPFZkysCx4DN40kmwVmwePpvFiARwOyzVkgxunNLGOpkRKdjUvs1RlUWECe/byKSqYDDVTLmAO+IWPqLqm5bnbgYd6ypIZvoIJMg3B2IU5/g6sM1VSJrH5ZpYYMxMbTCpmaPLGOMRAJ87x81b6WdNjmP6hVbpkIovgWIH/cP6lOM7M5sdJtGfgII0FY8osOUZgWUpF4lrmnZzTeP9+YT7CkOu11jsHFod4Qd/JV3LjfTwd9eCkMSItyWXo6Ie6kWNjdIlxawfvEfcqEzHMw86WHsjc/F4dyinNvMLgOASH0HjGzDvJFhKcn6o3vkQlqR0DvKBX8jfGshWHJ8FS6kPeOH3VbxNSVc+jzAcMAdtJVImI7ZAZvR01nRtAjzATjDUQecCDvv6oZ0Q6uYuJ4cohOKFI6bm0enjyUpdl4dsZYzCRLxa+0gpg5kX4KRqUrwlHYa1xeLckWkHFy+CLEldCmeaftw7eRC7DWj9FJsax2NaWFNydlJ4XAtcA8WP1jgkqAk8hB+YSrqtobAAIgrLZWMBXE5c28N3JvzuozE5UWugSSN4Ex3FPW5hUaZ3A4JevnksMCDGxS5SG4Y326K4+WmCuHnijrVyTJ43suCqJHJJitOpHBO6VYEHmLpggwIY4yaHfWHgeafnESwCdtvM/0UZSdxt5hLaDE80mbiyQwGLILh3CPKUt0hx3WYdwO40D5hMPwb3DUJCTzOiWUIJnU5o+/2WVXIs3JYmqIJBHCCseeSlHLqwg9U8H+Ep1iaboDnMLfER6L0mcPQ+EeiaZlkmExFM0qlMFp5WIPAtI2KHE6Iwo81uam4pkkAbmwA3Pgtxo+yjAh8urV3t+EuY0eZa0FWTKeimAw16WHaD8Rlz/5nSUlFjlGzzuzL6g/unz/CU2xGErf4T/5Xf0XqQYOj8A+SP8FQ+AegTow8Z5Rfhqg3Y4eIIV96JFooguFtJEfxW+62jMMqw7mGabfQLFulDDSq6aIsCZ8k+kOMOLIapSFHEEEy2bO7jNj33T2hS1EkX5clXTi3h5DuJuD3p5SdP/LfHcZIJ+ymykZX19kticOLS4ApviQWgHUmtTFuaAKjSImDEtv3rg41umNUiVgryvXR03EXubc0z/FRPiYSNSo0Gzkg10raSISm+h22q47BKB54qPNQ7Sja/vQ4ijkoeuqnaQm75SJcE4o1BzsEVQ+XPQdVoHvH+ibGrHKEVV+p3cg8iITSMSlfR22DcIwCneQYbrKzGfG9rfUgLXuk3s+wVeXYcjD1OQvScf3mflPe30KKYRVmMsqXupeg+w2HfxSOcZLWwlTRWplp/K4XY7+F3Hw37kw6wrEtl8fs2WejiW6e1dRGb4StV09XSeWXMgEgk2+3zU90I6KvxrhUquNPDA3OzqsbtZyHN3pfbZ6TMOxoa1jQ1oAAAEACwCeOHybzT5qjzT+xcR/gP/lKNemNVH4R6IKtHL4ioP6QgEC/qlsLnoL4n5rHP21U5oh0hqtMyix+RI3f9sj4kX7YHxLDv/VFbmuqfSesTumHlibh+1x8SH7baPzLEqnSSrG6ZVOktY8UWHlRueN6QNDD2uCw3pLj3nEvcHkXEX4QNkhUz6qbFxUbVqlxJJ3QTnkTWh3+0yRFRof3mzh4EJShiWT2XEHk7+oUYiIWWrMxySRPtzB0Q64Pn6Lio6i5h7EO4RY+fNQ1OqRsU8o4lhs4Qs8CyzX2cOo8jPij6s/D6FPRhabvdd6FcHAvF2mf13JmKQk3Rxpn1KN1Fh2keK5eXA3EJN1UndKjXJHRZT5lcP0abOMrpzrbIxTB2aSfBAhsO7dPKGAqOE2A713SwtTg2O82Uxk2QV67tLXE89IMDxcbBMSSFujOFbSr03F0uDgZ5QZP0Wg1s8Gqz7XVK6Y9HzgKdF7Xk9Zqa8/C8doCeILZ/lVUdjn/ABH1W0Pmo6Naq5vRqtdTraXsdu11x/se9V8ZZlzXzoLgLhrnuLfPiR3ElZ+cU/4ijFd3MrL/AEaWQ1tmfsaIa4BogACwAGwA4Bcu6RAtjrL+KyV1d3MpJ1d3Mp2J5DYR0iZ/ifNBY317uZQTsXl/B//Z" alt="Style" class="info-card-image">
-                <h3>Gaya Bertarung</h3>
-                <p>Gervonta dikenal dengan gaya bertarung southpaw yang agresif dan eksplosif. Dia memiliki timing yang sempurna, footwork yang excellent, dan power punch yang devastating di kedua tangannya. Kombinasi kecepatan, power, dan akurasi membuatnya sangat berbahaya di ring.</p>
-                <span class="stat">Southpaw Power Puncher</span>
-            </div>
-
-            <div class="info-card animate-on-scroll">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYP-Bt2NPfIvbHa9z8epPFiIVwCF14YyhhELGj4uI7uU6BLyt1BCqZaG5F2-zxHmHXmA&usqp=CAU" alt="Training" class="info-card-image">
-                <h3>Pelatihan & Tim</h3>
-                <p>Davis dilatih di bawah bimbingan pelatih terkenal dan merupakan bagian dari Mayweather Promotions. Dia berlatih dengan intensitas tinggi dan disiplin yang ketat, mempersiapkan setiap pertandingan dengan serius. Dedikasinya terhadap olahraga ini terlihat dari performanya yang konsisten.</p>
-                <span class="stat">Mayweather Promotions</span>
-            </div>
-
-            <div class="info-card animate-on-scroll">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfpqDtoiSpM3uH5NKXl6OiaPAVJm5E2Y1Ezw&s" alt="Legacy" class="info-card-image">
-                <h3>Legacy & Dampak</h3>
-                <p>Gervonta Davis bukan hanya seorang petinju hebat, tetapi juga inspirasi bagi banyak pemuda, terutama dari komunitas Baltimore. Perjalanannya dari masa kecil yang sulit hingga menjadi juara dunia memotivasi banyak orang untuk mengejar impian mereka tanpa menyerah.</p>
-                <span class="stat">Boxing Icon</span>
-            </div>
-
-            <div class="info-card animate-on-scroll">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5NZhEQzkjhVhUecZwnem1VEei0pV6mTVLrA&s" alt="Future" class="info-card-image">
-                <h3>Masa Depan Karir</h3>
-                <p>Dengan usia yang masih muda dan skill yang terus berkembang, masa depan Gervonta Davis di dunia tinju sangat cerah. Banyak yang menantikan superfight-nya melawan petinju-petinju top lainnya. Potensinya untuk menjadi salah satu petinju terbaik sepanjang masa sangat besar.</p>
-                <span class="stat">Future Hall of Famer</span>
-            </div>
+    <section class="section" id="company">
+        <div class="company-card animate-on-scroll">
+            <h3>5. Pemahaman Konsep Mendalam</h3>
+            <p>
+                Untuk pemahaman yang lebih dalam, perlu diketahui:
+                <ul>
+                    <li>**Arsitektur Komputer** seperti model Von Neumann menjelaskan bagaimana CPU, memori, dan perangkat I/O diatur oleh software sebagai interpreter instruksi.</li>
+                    <li>**Abstraksi Software**: Software disusun dari level tinggi (user interface) hingga rendah (kode mesin) untuk kompatibilitas.</li>
+                    <li>**Perkembangan Hardware** (seperti multi-core CPU/GPU) memungkinkan software lebih kompleks dan efisien (misalnya AI, grafik 3D).</li>
+                    <li>**Keamanan**: Software bisa mengontrol hardware agar aman dari kerusakan atau akses ilegal (firewall, enkripsi).</li>
+                </ul>
+            </p>
+            <a href="#home" class="company-btn">Kembali ke Atas</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 SUKI67OFFICIAL - Blog by Ishak Patay</p>
-            <p>Siswa Sekolah Kristen Kasih Bangsa</p>
-            <p class="footer-highlight">Di operasikan oleh SPACE STORE INDONESIA</p>
+            <p>&copy; 2024 SUKI67OFFICIAL. All Rights Reserved.</p>
+            <p class="hosting-credit">Website ini menggunakan hosting dari <strong>SPACE STORE</strong></p>
         </div>
     </footer>
 
     <script>
+        // Check if user is logged in
+        window.addEventListener('load', function() {
+            const savedUsername = localStorage.getItem('username');
+            
+            if (savedUsername) {
+                setTimeout(() => {
+                    document.getElementById('security-screen').classList.add('hidden');
+                    document.getElementById('loading-screen').classList.add('active');
+                }, 2000);
+                
+                setTimeout(() => {
+                    document.getElementById('loading-screen').classList.add('hidden');
+                    setUsername(savedUsername);
+                }, 3500);
+            } else {
+                setTimeout(() => {
+                    document.getElementById('security-screen').classList.add('hidden');
+                    document.getElementById('username-modal').classList.add('active');
+                }, 2000);
+            }
+        });
+
+        function submitUsername() {
+            const input = document.getElementById('username-input');
+            const username = input.value.trim();
+            
+            if (username) {
+                document.getElementById('username-modal').classList.remove('active');
+                document.getElementById('loading-user').classList.add('active');
+                
+                setTimeout(() => {
+                    document.getElementById('loading-user').classList.remove('active');
+                    localStorage.setItem('username', username);
+                    document.getElementById('loading-screen').classList.add('active');
+                    
+                    setTimeout(() => {
+                        document.getElementById('loading-screen').classList.add('hidden');
+                        setUsername(username);
+                    }, 1500);
+                }, 2000);
+            } else {
+                alert('Mohon masukkan nama pengguna!');
+            }
+        }
+
+        function setUsername(username) {
+            // Updated avatar to use the new color scheme
+            const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&background=eab308&color=000&size=100`;
+            
+            document.getElementById('user-name').textContent = username;
+            document.getElementById('user-avatar').src = avatarUrl;
+            document.getElementById('mobile-username').textContent = username;
+            document.getElementById('mobile-avatar').src = avatarUrl.replace('size=100', 'size=200');
+        }
+
+        document.getElementById('username-input')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitUsername();
+            }
+        });
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            const profile = document.getElementById('user-profile');
+            const dropdown = document.getElementById('profile-dropdown');
+            
+            if (profile && !profile.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        function logout() {
+            document.getElementById('profile-dropdown').classList.remove('active');
+            document.getElementById('mobile-profile-modal').classList.remove('active');
+            localStorage.removeItem('username');
+            document.getElementById('username-input').value = '';
+            document.getElementById('username-modal').classList.add('active');
+        }
+
+        function showMobileProfile() {
+            document.getElementById('mobile-profile-modal').classList.add('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                const offsetTop = element.offsetTop - 100;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+
         // Navbar scroll effect
         let ticking = false;
         
@@ -1038,11 +1410,11 @@
             if (scrolled) {
                 navbar.style.background = 'rgba(255, 255, 255, 0.98)';
                 navbar.style.backdropFilter = 'blur(30px)';
-                navbar.style.boxShadow = '0 20px 40px rgba(251, 191, 36, 0.3)';
+                navbar.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
             } else {
                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
                 navbar.style.backdropFilter = 'blur(20px)';
-                navbar.style.boxShadow = '0 8px 32px rgba(251, 191, 36, 0.2)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
             }
             ticking = false;
         }
@@ -1052,18 +1424,6 @@
                 requestAnimationFrame(updateNavbar);
                 ticking = true;
             }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 100;
-                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-                }
-            });
         });
 
         // Animate on scroll
@@ -1086,38 +1446,7 @@
             observer.observe(el);
         });
 
-        // Server Info Functions
-        function openServerInfo() {
-            document.getElementById('server-info-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeServerInfo() {
-            document.getElementById('server-info-modal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('server-info-modal')?.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeServerInfo();
-            }
-        });
-
-        // Mobile functions
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function scrollToSection(id) {
-            const element = document.getElementById(id);
-            if (element) {
-                const offsetTop = element.offsetTop - 100;
-                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-            }
-        }
-
-        // Parallax effect for orbs
+        // Parallax effect for floating shapes
         document.addEventListener('mousemove', function(e) {
             const orbs = document.querySelectorAll('.orb');
             const x = e.clientX / window.innerWidth;
@@ -1132,14 +1461,32 @@
         });
 
         // Hover effects for cards
-        document.querySelectorAll('.info-card, .bio-card').forEach(card => {
+        document.querySelectorAll('.project-card, .music-box, .company-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-12px) scale(1.02)';
+                this.style.transform = this.classList.contains('company-card') ? 
+                    'translateY(-8px)' : 'translateY(-12px) scale(1.02)';
             });
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
+        });
+
+        // Close mobile profile with swipe down
+        let startY = 0;
+        const mobileProfile = document.getElementById('mobile-profile-modal');
+        
+        mobileProfile.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+        });
+        
+        mobileProfile.addEventListener('touchmove', function(e) {
+            const currentY = e.touches[0].clientY;
+            const diff = currentY - startY;
+            
+            if (diff > 100) {
+                mobileProfile.classList.remove('active');
+            }
         });
 
         // Page load animation
@@ -1150,13 +1497,6 @@
             setTimeout(() => {
                 document.body.style.opacity = '1';
             }, 100);
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeServerInfo();
-            }
         });
     </script>
 </body>
